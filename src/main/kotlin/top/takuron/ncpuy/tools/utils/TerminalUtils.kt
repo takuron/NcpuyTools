@@ -11,6 +11,7 @@ object TerminalUtils {
         while(true){
             println("--------------------")
             println(title)
+            println("")
 
             val it = list.iterator()
             var pos = 1
@@ -24,7 +25,7 @@ object TerminalUtils {
             print(DEFAULT_MENU_SELECT)
 
 
-            var input = readln()
+            val input = readln()
 
             if(input.toIntOrNull()!=null){
                 val num = input.toInt()-1
