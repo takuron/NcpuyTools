@@ -15,7 +15,7 @@ fun main(args: Array<String>) {
 }
 
 private fun generateKey(){
-    var size = 256
+    var size = 128
     println("Please input size(default:256)")
     val input = readln()
     if(input.toIntOrNull()!=null)  size = input.toInt()
