@@ -8,6 +8,8 @@ import java.io.OutputStreamWriter
 import kotlin.math.ln
 import kotlin.math.max
 
+
+const val MIN_LEN = 5
 class SpecificCharacterProguard(private val fileName: String, private val chars: CharArray) {
 
     constructor(fileName: String,chars:String) : this(fileName,chars.toCharArray())
@@ -28,7 +30,7 @@ class SpecificCharacterProguard(private val fileName: String, private val chars:
 
         var i = 0
         while (i < 8000) {
-            val len = (2 + Math.random() * len).toInt()
+            val len = (MIN_LEN + Math.random() * len).toInt()
             val k = StringBuilder()
             for (i1 in 0..<len) {
                 k.append(getRadomChar(i1 == 0))
