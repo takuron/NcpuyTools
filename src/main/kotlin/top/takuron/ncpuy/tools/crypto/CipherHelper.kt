@@ -74,7 +74,6 @@ class CipherHelper(val info: CipherInfo) {
         val cipher = Cipher.getInstance(info.transformation)
         cipher.init(Cipher.ENCRYPT_MODE, keySpec)
         return cipher.doFinal(data)
-        return null
     }
 
     /**
